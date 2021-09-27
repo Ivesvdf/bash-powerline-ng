@@ -119,9 +119,9 @@ __powerline() {
         # print the git branch segment without a trailing newline
 	# branch is modified?
 	if [ -n "$(git status --porcelain)" ]; then
-		printf "${BG_COLOR8}$RESET$BG_COLOR8 $branch$marks $FG_COLOR9"
+		printf "${BG_COLOR8}$RESET$BG_COLOR8 $branch$marks $FG_COLOR9"
 	else
-		printf "${BG_BLUE}$RESET$BG_BLUE $branch$marks $RESET$FG_BLUE"
+		printf "${BG_BLUE}$RESET$BG_BLUE $branch$marks $RESET$FG_BLUE"
 	fi
     }
 
@@ -142,11 +142,11 @@ __powerline() {
 	fi
 	
 
-	PS1+="$BG_HOSTNAME$FG_COLOR3$BG_HOSTNAME$BOLD \h $RESET$FG_HOSTNAME$BG_COLOR4$FG_COLOR5$BG_COLOR5 \w "
+	PS1+="$BG_HOSTNAME$FG_COLOR3$BG_HOSTNAME$BOLD \h $RESET$FG_HOSTNAME$BG_COLOR4$FG_COLOR5$BG_COLOR5 \w "
 	PS1+="$RESET${FG_COLOR6}"
 	PS1+="$(__git_info)"
-	PS1+="$BG_EXIT$RESET"
-	PS1+="$BG_EXIT$FG_BASE3 ${PS_SYMBOL} ${RESET}${FG_EXIT}${RESET} "
+        PS1+="$BG_EXIT$RESET"
+        PS1+="$BG_EXIT$FG_BASE3 ${PS_SYMBOL} ${RESET}${FG_EXIT}${RESET} "
 
     }
 
